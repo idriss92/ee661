@@ -1,0 +1,114 @@
+\NeedsTeXFormat{LaTeX2e}
+
+%Font Setup
+%\usepackage[T1]{fontenc} %Use default
+
+%Use the Adobe Jensen Pro font.
+\usepackage[T1]{fontenc}%LY1
+%\newcommand{\Jenson}{\usefont{LY1}{paj}{m}{n}}
+%\newcommand{\JensonIt}{\usefont{LY1}{paj}{m}{it}}
+%\newcommand{\JensonBold}{\usefont{LY1}{paj}{b}{n}}
+%\newcommand{\JensonBoldIt}{\usefont{LY1}{paj}{b}{it}}
+%\newcommand{\JensonSemibold}{\usefont{LY1}{paj}{sb}{n}}
+%\newcommand{\JensonSemiboldIt}{\usefont{LY1}{paj}{sb}{it}}
+%\newcommand{\JensonLt}{\usefont{LY1}{paj}{l}{n}}
+%\newcommand{\JensonLtIt}{\usefont{LY1}{paj}{l}{it}}
+\renewcommand{\rmdefault}{ppl}
+\renewcommand{\bfdefault}{bx}
+\renewcommand{\sfdefault}{pcr}
+
+%Use Garamond Font
+%\usepackage[T1]{fontenc}
+%\usepackage{garamond}
+
+%Use the GFS Didot Font.
+%\usepackage[T1]{fontenc}
+%\usepackage{gfsdidot}%Still has conflict with some math font
+
+%Use Palatino LinoType Font
+%\renewcommand{\rmdefault}{ppl}
+%\renewcommand{\sfdefault}{\rmdefault}
+
+%End Font Setup
+
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{titletoc}%
+\usepackage{titlesec}%
+\usepackage[top=1.5in, bottom=1in, left=1.25in, right=1.25in]{geometry}%
+\usepackage{amsfonts,amsmath,amssymb,mathrsfs}%math packages
+\usepackage[unicode]{hyperref}%
+\usepackage[ruled,vlined]{algorithm2e}%
+%\usepackage{newalg}%since we want to use the design of CLR
+\usepackage{fancyhdr}%
+%\usepackage{slantsc}%
+\usepackage{array}
+\usepackage{subfig,subfloat}%
+\usepackage{pgf,tikz}%
+\usepackage{listings}%
+%\usepackage[final]{pdfpages}
+
+\def\@homeworkauthor{Use sethwauthor\{author\} to set your name}
+\def\@homeworktitle{Use sethwtitle\{title\} to set the title}
+\def\sethwtitle#1{
+\def\@homeworktitle{#1}}%
+\def\sethwauthor#1{
+\def\@homeworkauthor{#1}}%
+\def\makehwheader{
+\pagestyle{fancy}
+\lhead{\bfseries{\@homeworktitle}}%
+\rhead{\textit{By \@homeworkauthor}}%
+\chead{}%
+\lfoot{}%
+\cfoot{\thepage}%
+\rfoot{}}%
+
+\titleformat{\section}%
+    [hang]%
+    {\normalfont\large\bfseries%
+     }%
+    {Section \thesection
+     }%
+    {1em}%
+    {}
+    [
+    \hrulefill{\phantom{mmmmmm}}
+    \vskip 6pt]
+\titlespacing{\section}%
+    {0bp}{24bp}{6bp}
+
+\titleformat{\subsection}%
+    [hang]%
+    {\normalfont\normalsize\bfseries%
+     }%
+    {(\@arabic\c@subsection)}%
+    {1em}%
+    {}%
+    {}%
+\titlespacing{\subsection}%
+    {0bp}{16bp}{6bp}
+
+\def\tab{\noindent \leftskip=30bp}
+%the following command works with package newalg.
+\def\comment#1{
+\rhd $#1$\\ }
+
+\def\makehwtitle{
+\begin{center}
+\textbf{ \large{\@homeworktitle}}\\%
+\@homeworkauthor
+\end{center}
+%put other desirable format here
+\parindent=0em
+%%algorithm2e settings
+%\linesnumbered
+%\dontprintsemicolon%
+%%newalg settings
+
+}
+
+
+\makeatletter
+\newcommand\figcaption{\def\@captype{figure}\caption}
+\newcommand\tabcaption{\def\@captype{table}\caption}
+\makeatother
+\endinput

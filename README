@@ -1,0 +1,17 @@
+This is my selected homework projects for the computer vision class I
+took:
+https://engineering.purdue.edu/kak/courses-i-teach/ECE661_Fall2010/homework.htm
+Please go to the course webpage to download test images for each
+homework.
+
+The precompiled libraries I included are only for WIN32 and directory
+ listing functions are also dependent on <windows.h>, thus MSVC is 
+needed for compling. 
+
+Hw6 is a C++ implementation of Zhengyou Zhang's calibration method.
+
+Hw8 is a C++ implementation of the AdaBoost object detection algorithm
+with Haar features [1].
+
+[1] Robust real-time face detection P Viola, MJ Jones - International
+journal of computer vision, 2004 - Springer
